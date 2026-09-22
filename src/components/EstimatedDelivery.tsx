@@ -24,18 +24,24 @@ export default function EstimatedDelivery({
           This order missed its estimate ({estimatedDelivery}). We're checking with the carrier.
         </p>
         <div className="flex gap-2 mt-3">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
             onClick={onRefresh}
-            className="flex-1 rounded-xl bg-white border border-amber-300 text-amber-800 text-xs font-semibold py-2 active:scale-95 transition-transform"
+            className="flex-1 rounded-xl bg-white border border-amber-300 text-amber-800 text-xs font-semibold py-2"
           >
             Refresh status
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
             onClick={onContactSupport}
-            className="flex-1 rounded-xl bg-amber-600 text-white text-xs font-semibold py-2 active:scale-95 transition-transform"
+            className="flex-1 rounded-xl bg-amber-600 text-white text-xs font-semibold py-2"
           >
             Contact support
-          </button>
+          </motion.button>
         </div>
       </motion.div>
     )

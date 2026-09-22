@@ -31,12 +31,15 @@ export default function ReportMissingPackageBanner({
           <motion.div key="prompt" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <p className="text-sm font-semibold text-rose-800">Marked as delivered</p>
             <p className="text-xs text-rose-700 mt-1">Didn't receive this package? Let us know.</p>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
               onClick={onReport}
-              className="mt-3 w-full rounded-xl bg-rose-600 text-white text-xs font-semibold py-2 active:scale-95 transition-transform"
+              className="mt-3 w-full rounded-xl bg-rose-600 text-white text-xs font-semibold py-2"
             >
               Report missing package
-            </button>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -9,8 +9,8 @@ const container: Variants = {
 }
 
 const item: Variants = {
-  hidden: { opacity: 0, x: -12 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+  hidden: { opacity: 0, x: -16, scale: 0.9 },
+  show: { opacity: 1, x: 0, scale: 1, transition: { type: 'spring', stiffness: 340, damping: 22 } },
 }
 
 export default function DeliveryTimeline({ steps, currentStatus }: { steps: TimelineStep[]; currentStatus: string }) {
@@ -32,7 +32,17 @@ export default function DeliveryTimeline({ steps, currentStatus }: { steps: Time
                     : 'bg-gray-100 text-gray-400 ring-1 ring-gray-200',
                 ].join(' ')}
               >
-                {step.done ? '✓' : ''}
+                {step.done ? (
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 15, delay: 0.1 }}
+                  >
+                    ✓
+                  </motion.span>
+                ) : (
+                  ''
+                )}
                 {isCurrent && !step.done ? (
                   <motion.span
                     className="absolute inset-0 rounded-full bg-violet-400"

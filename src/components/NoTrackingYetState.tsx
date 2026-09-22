@@ -10,12 +10,15 @@ export default function NoTrackingYetState({ onRefresh }: { onRefresh: () => voi
         <p className="text-xs text-gray-400 mt-1.5 max-w-[260px]">
           Your order's been placed and is being prepared. Tracking details will appear here once it ships.
         </p>
-        <button
+        <motion.button
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 20 }}
           onClick={onRefresh}
-          className="mt-4 rounded-xl bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 active:scale-95 transition-transform"
+          className="mt-4 rounded-xl bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2"
         >
           Check again
-        </button>
+        </motion.button>
       </Card>
     </motion.div>
   )
