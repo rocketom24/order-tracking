@@ -3,7 +3,12 @@ import Card from './Card'
 
 export default function ErrorState({ onRetry }: { onRetry: () => void }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+    <motion.div
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="flex min-h-[620px] items-center justify-center"
+    >
       <Card className="flex flex-col items-center text-center py-10">
         <div className="text-4xl mb-3">⚠️</div>
         <p className="text-sm font-semibold text-gray-900">Couldn't load tracking</p>
