@@ -35,8 +35,7 @@ function BagLoader() {
 
 export default function LoadingState() {
   return (
-    <div className="flex flex-col gap-4">
-      <BagLoader />
+    <div className="relative min-h-[620px]">
       <div className="flex flex-col gap-4 opacity-20">
         <Card>
           <Shimmer className="h-4 w-24 mb-4" />
@@ -60,6 +59,9 @@ export default function LoadingState() {
             <Shimmer className="h-3.5 w-36" />
           </div>
         </Card>
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <BagLoader />
       </div>
     </div>
   )
