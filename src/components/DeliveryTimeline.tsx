@@ -28,7 +28,7 @@ export default function DeliveryTimeline({ steps, currentStatus }: { steps: Time
                 className={[
                   'relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold',
                   step.done
-                    ? 'bg-violet-600 text-white'
+                    ? 'bg-emerald-600 text-white'
                     : 'bg-gray-100 text-gray-400 ring-1 ring-gray-200',
                 ].join(' ')}
               >
@@ -45,7 +45,7 @@ export default function DeliveryTimeline({ steps, currentStatus }: { steps: Time
                 )}
                 {isCurrent && !step.done ? (
                   <motion.span
-                    className="absolute inset-0 rounded-full bg-violet-400"
+                    className="absolute inset-0 rounded-full bg-emerald-400"
                     animate={{ opacity: [0.5, 0, 0.5], scale: [1, 1.4, 1] }}
                     transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
                   />
@@ -53,7 +53,7 @@ export default function DeliveryTimeline({ steps, currentStatus }: { steps: Time
               </span>
               {!isLast && (
                 <span
-                  className={`w-0.5 flex-1 min-h-6 ${step.done ? 'bg-violet-600' : 'bg-gray-200'}`}
+                  className={`w-0.5 flex-1 min-h-6 ${step.done ? 'bg-emerald-600' : 'bg-gray-200'}`}
                 />
               )}
             </div>
@@ -61,7 +61,7 @@ export default function DeliveryTimeline({ steps, currentStatus }: { steps: Time
               <p className={`text-sm font-medium ${step.done || isCurrent ? 'text-gray-900' : 'text-gray-400'}`}>
                 {step.label}
                 {isCurrent && (
-                  <span className="ml-2 inline-block rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-semibold text-violet-700 align-middle">
+                  <span className="ml-2 inline-block rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 align-middle">
                     Current
                   </span>
                 )}

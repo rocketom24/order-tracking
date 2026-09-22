@@ -8,7 +8,7 @@ export default function PhoneFrame({ children }: { children: ReactNode }) {
       <div className="absolute -left-[2px] top-[230px] h-14 w-[3px] rounded-l bg-gray-800" />
       <div className="absolute -right-[2px] top-[190px] h-20 w-[3px] rounded-r bg-gray-800" />
 
-      <div className="relative h-full w-full overflow-hidden rounded-[42px] bg-[#f4f3f7]">
+      <div className="relative h-full w-full overflow-hidden rounded-[42px] bg-white">
         <div className="absolute left-1/2 top-0 z-20 h-[28px] w-[120px] -translate-x-1/2 rounded-b-2xl bg-gray-950" />
 
         <div className="h-full w-full overflow-y-auto px-4 pb-8 pt-11 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

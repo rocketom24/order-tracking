@@ -52,10 +52,10 @@ export default function EstimatedDelivery({
       initial={{ opacity: 0, y: 6 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="rounded-2xl bg-violet-50 p-4"
+      className="rounded-2xl bg-emerald-50 p-4"
     >
-      <p className="text-xs text-violet-600 font-medium">Estimated delivery</p>
-      <p className="text-base font-semibold text-violet-900 mt-0.5">{estimatedDelivery}</p>
+      <p className="text-xs text-emerald-700 font-medium">Estimated delivery</p>
+      <p className="text-base font-semibold text-emerald-900 mt-0.5">{estimatedDelivery}</p>
     </motion.div>
   )
 }

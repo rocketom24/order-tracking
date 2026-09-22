@@ -15,7 +15,7 @@ export default function ErrorState({ onRetry }: { onRetry: () => void }) {
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
           onClick={onRetry}
-          className="mt-4 rounded-xl bg-violet-600 text-white text-xs font-semibold px-4 py-2"
+          className="mt-4 rounded-xl bg-emerald-600 text-white text-xs font-semibold px-4 py-2"
         >
           Try again
         </motion.button>

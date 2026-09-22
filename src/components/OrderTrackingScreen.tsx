@@ -55,7 +55,7 @@ export default function OrderTrackingScreen({ order, onRefresh }: { order: Order
         whileTap={{ scale: 0.96 }}
         transition={{ type: 'spring', stiffness: 400, damping: 20 }}
         onClick={() => setSupportOpen(true)}
-        className="w-full rounded-2xl bg-gray-900 text-white text-sm font-semibold py-3"
+        className="w-full rounded-2xl bg-emerald-700 text-white text-sm font-semibold py-3"
       >
         Contact support
       </motion.button>

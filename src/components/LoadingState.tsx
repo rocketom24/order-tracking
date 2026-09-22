@@ -24,7 +24,7 @@ function BagLoader() {
         🛍️
       </motion.div>
       <motion.div
-        className="mt-2 h-1.5 w-10 rounded-full bg-violet-200"
+        className="mt-2 h-1.5 w-10 rounded-full bg-emerald-200"
         animate={{ scaleX: [1, 0.6, 1], opacity: [0.6, 0.3, 0.6] }}
         transition={{ duration: 1.1, repeat: Infinity, ease: 'easeInOut' }}
       />

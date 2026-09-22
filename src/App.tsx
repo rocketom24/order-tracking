@@ -35,9 +35,9 @@ export default function App() {
   const contentKey = override === 'none' ? scenario : override
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#f4f3f7] py-10 px-4">
-      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-violet-200/40 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 -right-24 h-72 w-72 rounded-full bg-fuchsia-200/30 blur-3xl" />
+    <div className="relative min-h-screen w-full overflow-hidden bg-white py-10 px-4">
+      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/2 -right-24 h-72 w-72 rounded-full bg-lime-200/30 blur-3xl" />
 
       <div className="relative mx-auto flex w-full max-w-[400px] flex-col items-center gap-6">
         <div className="w-full rounded-2xl bg-white p-3 shadow-sm">
@@ -55,7 +55,7 @@ export default function App() {
                 }}
                 className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-colors ${
                   scenario === s.key && override === 'none'
-                    ? 'bg-violet-600 text-white'
+                    ? 'bg-emerald-600 text-white'
                     : 'bg-gray-100 text-gray-500'
                 }`}
               >
@@ -72,7 +72,7 @@ export default function App() {
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                 onClick={() => setOverride(override === o ? 'none' : o)}
                 className={`rounded-lg px-2.5 py-1 text-xs font-medium capitalize transition-colors ${
-                  override === o ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-500'
+                  override === o ? 'bg-emerald-800 text-white' : 'bg-gray-100 text-gray-500'
                 }`}
               >
                 {o}
