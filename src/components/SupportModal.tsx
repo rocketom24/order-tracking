@@ -11,7 +11,7 @@ export default function SupportModal({ open, onClose }: { open: boolean; onClose
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/40"
+          className="absolute inset-0 z-50 flex items-end justify-center rounded-[42px] bg-black/40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

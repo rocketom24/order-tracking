@@ -10,7 +10,7 @@ export default function OrderSummaryCard({ product, orderId }: { product: Produc
         className="h-16 w-16 rounded-2xl object-cover shrink-0 bg-gray-100"
       />
       <div className="min-w-0 flex-1">
-        <p className="text-xs text-gray-400">Order {orderId}</p>
+        <p className="text-xs text-gray-400 truncate">Order {orderId}</p>
         <p className="text-sm font-semibold text-gray-900 truncate">{product.name}</p>
         <p className="text-xs text-gray-500 mt-0.5">Qty {product.qty}</p>
       </div>

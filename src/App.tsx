@@ -35,7 +35,7 @@ export default function App() {
   const contentKey = override === 'none' ? scenario : override
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-white py-10 px-4">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-white py-10 px-4">
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 -right-24 h-72 w-72 rounded-full bg-lime-200/30 blur-3xl" />
 
